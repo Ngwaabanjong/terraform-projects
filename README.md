@@ -1,2 +1,2 @@
 # terraformpj
-dev vpc project 
+azurerm project
