@@ -7,10 +7,18 @@ resource "aws_instance" "MyServer" {
   vpc_security_group_ids      = [aws_security_group.MySg.id]
   associate_public_ip_address = true
 
+  //CODE//
+# for_each = toset(["master", "slave"])
+#    tags = {
+#      Name = "${each.key}-${var.project-name}-ec2"
+#    }
+
   tags = {
     Name = "${var.project-name}-ec2"
   }
 }
+
+
 
 
 
