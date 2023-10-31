@@ -15,8 +15,8 @@ Browse: https://www.terraform.io/
 - Give name to path by naming the location C:\Program Files\terraform
 
 ## 3. Set Path in Environment Variables
-- On PC app search, browse **Environment Variable**
-- On Advance, click: Environment Varables
+- On PC app search, browse **Environment Variables**
+- On **Advanced**, click: "Environment Varables"
 
 ![image](https://github.com/Ngwaabanjong/terraform-projects/assets/86162181/656c046e-53bf-4e63-a4a0-910c4213af39)
 - Double click on path:
