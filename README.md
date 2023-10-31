@@ -17,10 +17,13 @@ Browse: https://www.terraform.io/
 ## 3 Set Path in Environment Variables
 - On PC app search, browse **Environment Variable**
 - On Advance, click: Environment Varables
+
 ![image](https://github.com/Ngwaabanjong/terraform-projects/assets/86162181/656c046e-53bf-4e63-a4a0-910c4213af39)
 - Double click on path:
+  
 ![image](https://github.com/Ngwaabanjong/terraform-projects/assets/86162181/a3ddefa3-489a-4c46-8fa7-2ea7fcc63eec)
 - Click new and ADD the **C:\Program Files\terraform** to the PATH and save:
+
 ![image](https://github.com/Ngwaabanjong/terraform-projects/assets/86162181/6baaa346-41f7-4a89-bf0d-3a199616fdc0)
 
 ## 4 Verify Installation
