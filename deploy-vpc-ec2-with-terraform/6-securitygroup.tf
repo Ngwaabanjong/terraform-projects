@@ -1,5 +1,5 @@
 resource "aws_security_group" "MySg" {
- name        = "my-tf-sg"
+ name        = var.sgname
  description = "Allow HTTP to web server"
  vpc_id      = aws_vpc.MyVpc.id
 
