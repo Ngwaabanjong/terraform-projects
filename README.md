@@ -31,6 +31,8 @@ Browse: https://www.terraform.io/
 ```
 terraform --version
 ```
+## More Terraform Commands
+https://spacelift.io/blog/terraform-commands-cheat-sheet
 
 
 
