@@ -60,7 +60,8 @@ roleRef:
 ```
 
 ## 4 - Grant IAM Developer User Access.
-- To map IAM user with Kubernetes RBAC system, we need to modify aws-auth configmap. Open the config map and add arn of the IAM user under mapUsers key.
+- To map IAM user with Kubernetes RBAC system, we need to modify aws-auth configmap.
+- Open the config map and add arn of the IAM user under mapUsers key.
 ```
 kubectl edit -n kube-system configmap/aws-auth
 ```
