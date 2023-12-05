@@ -23,6 +23,8 @@
         }
     ]
 }
+
+
 ```
 
 ## 2 - Configure IAM User on CLI
