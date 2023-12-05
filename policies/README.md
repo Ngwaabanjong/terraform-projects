@@ -3,7 +3,7 @@
 # 1 - Create Read Group for Developers
 - This will be an RBAC Policy Configuration.
 - Create IAM User name developer with programatic access using the below policy.
-  ```
+```
   {
     "Version": "2012-10-17",
     "Statement": [
@@ -24,6 +24,7 @@
     ]
 }
 ```
+
 ## 2 - Configure IAM User on CLI
 ```
 aws configure --profile developer
@@ -54,13 +55,14 @@ roleRef:
   kind: ClusterRole
   name: reader
   apiGroup: rbac.authorization.k8s.io
-
 ```
+
 ## 4 - Grant IAM Developer User Access.
 - To map IAM user with Kubernetes RBAC system, we need to modify aws-auth configmap. Open the config map and add arn of the IAM user under mapUsers key.
 ```
 kubectl edit -n kube-system configmap/aws-auth
 ```
+
 - Now Add this section to the Configmap file.
 ```
   mapUsers: |
@@ -69,6 +71,7 @@ kubectl edit -n kube-system configmap/aws-auth
       groups: 
       - reader
 ```
+
 ## 5 - Configure user to EKS Cluster.
 - Run the below command on CLI.
 ```
@@ -126,7 +129,7 @@ aws iam get-role --role-name eks-teks-test-admin-roleest-admin-role
 - For any user that wants to use eks-test-admin-role, needs an assume policy to be able use the role.
 - Copy the role arn and update the below policy.
 - Create assume policy and name it: eksAminAssumeRolePolicy
-  ```
+```
   {
     "Version": "2012-10-17",
     "Statement": [
@@ -139,7 +142,7 @@ aws iam get-role --role-name eks-teks-test-admin-roleest-admin-role
         }
     ]
 }
-  ```
+```
 
 ## 4 - Create IAM User(EKS Admin)
 - On AWS IAM, Create IAM User and attach eksAminAssumeRolePolicy
@@ -164,6 +167,7 @@ aws sts assume-role \
 ```
 aws eks --region us-east-1 update-kubeconfig --name demo
 ```
+
 b. Open aws-auth Configmap:
 - We will use Kubernetes RBAC group.
 ```
@@ -183,12 +187,14 @@ d. Open Provider Config file
 ```
 vim ~/.aws/config
 ```
+
 d. Add Code to Config file
 ```
 [profile eks-test-admin]
 role_arn = arn:aws:iam::XXXXXXX6445:role/eks-test-admin
 source_profile = manager
 ```
+
 e. Now let's update the Configuration
 ```
 aws eks update-kubeconfig \
