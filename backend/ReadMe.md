@@ -14,6 +14,7 @@
 - Backend configuration will uplaod the folders.
 
 ```tf
+# Create s3 bucket.
 resource "aws_s3_bucket" "mys3" {
     name = "terraform-s3-bucket-001"
     versioning {
@@ -28,7 +29,7 @@ resource "aws_s3_bucket" "mys3" {
     }
 }
 
-# Create Dynamodb table
+# Create Dynamodb table.
 resource "aws_dynamodb_table" "mydynamodb" {
     name = "state-lock-001"
     billing_mode = "PAY_PER_REQUEST"
