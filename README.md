@@ -31,6 +31,20 @@ Browse: https://www.terraform.io/
 ```
 terraform --version
 ```
+## More Terraform Commands
+https://spacelift.io/blog/terraform-commands-cheat-sheet
+```
+terraform init
+terraform fmt
+terraform validate
+terraform plan -out=tfplan
+terraform apply "tfplan"
+terraform plan -destroy -out=tfplan -input=false -lock=false
+terraform apply -input=false -auto-approve -lock=false tfplan
+OR vice versa,
+terraform plan -out=tfplan -input=false -lock=false
+terraform apply -destroy -input=false -auto-approve -lock=false tfplan
+```
 
 
 
