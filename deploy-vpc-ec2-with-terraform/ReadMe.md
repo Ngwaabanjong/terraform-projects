@@ -10,7 +10,7 @@ Configure your AWS credentials on the CLI: $ aws configure
 - We may add the backend portion in the provider file too in order to store our state files remotely.
 - Create an s3 bucket and add the name to the code.
 - Create key path in the bucket and add it to the code: path/terraform.tfstate
-###//CODE//
+##//CODE//
 ```
 terraform {
   backend "s3" {
