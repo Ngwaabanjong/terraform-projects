@@ -5,11 +5,13 @@ Link to blog: https://ngwaabanjong.com/how-to-deploy-vpc-ec2-with-terraform/
 Create a folder for your project & create a file called 0-provider.tf 
 Terraform provider: Link – https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 Configure your AWS credentials on the CLI: $ aws configure
-# OPTIONAL (ADD BACKEND)
-We may add the backend portion in the provider file too in order to store our state files remotely.
-Create an s3 bucket and add the name to the code.
-Create key path in the bucket and add it to the code: path/terraform.tfstate
-//CODE//
+
+## OPTIONAL (ADD BACKEND)
+- We may add the backend portion in the provider file too in order to store our state files remotely.
+- Create an s3 bucket and add the name to the code.
+- Create key path in the bucket and add it to the code: path/terraform.tfstate
+**//CODE//**
+```
 terraform {
   backend "s3" {
     bucket = "mybucket"
@@ -17,6 +19,7 @@ terraform {
     region = "us-east-1"
   }
 }
+```
 
 
 
