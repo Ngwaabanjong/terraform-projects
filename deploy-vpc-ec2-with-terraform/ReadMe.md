@@ -92,8 +92,13 @@ for_each = toset(["master", "slave"])
 # 11 Terraform CLI Commands.
 1. terraform init = will initialize the directory by installing independencies.
 2. terraform validate = will help validate if your code is well written.
-3. terraform plan = will output the entire plan of the resources that will be created.
-4. terraform apply = will deploy the resources in your cloud platform.
-5. terraform apply --target aws_instance.my_ec2  = create a single resource
-6. terraform destroy --target aws_instance.my_ec2 = destroy a single object
-7. terraform destroy = will destroy the whole infrastructure. 
+3. terraform plan -out main.tfplan = will output the entire plan of the resources that will be created.
+4. terraform apply "main.tfplan" = will deploy the resources in your cloud platform.
+5. terraform destroy = will destroy the whole infrastructure. 
+
+More CMD:
+1. terraform apply --target aws_instance.my_ec2  = create a single resource
+2. terraform destroy --target aws_instance.my_ec2 = destroy a single object
+3. terraform init -upgrade
+4. terraform state list
+5. terraform force-unlock [options] LOCK_ID = terraform force-unlock b8814894-4a5f-217b-e97b-c4f5c02a1f88
