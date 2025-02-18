@@ -10,7 +10,8 @@
   ## Configuration
   - Create a folder called tfswitch in C:\Program Files\ and copy the downloaded Binary files.
   - Create a folder call bin in C:\Users\Yourname\ and keep it empty.
-  - On you PC search "envirenment variable" and create a new path on PATH and insert: C:\Program Files\tfswitch
+  - On you PC search "envirenment variable" and create a new path on the System variables -> PATH and insert: C:\Program Files\tfswitch
+  - On you PC search "envirenment variable" and replace the Terraform PATH on the System variables -> PATH and insert: C:\Users\Yourname\bin
  
   ## USE CASE
   - On CLI Run
