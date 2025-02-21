@@ -8,7 +8,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-# Configure resource block with no dependencies 
+# Configure resource block with no attributes. 
 resource "aws_instance" "example_server" {
 
 }
